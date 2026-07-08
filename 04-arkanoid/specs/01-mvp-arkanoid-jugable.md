@@ -1,6 +1,6 @@
 # 01 - MVP Arkanoid Jugable
 
-**Estado:** Draft
+**Estado:** Implementado
 **Dependencias:** Ninguna (primer spec del proyecto)
 **Fecha:** 2026-07-08
 
@@ -100,19 +100,19 @@ BLOCK_HEIGHT = 16
 
 ## Criterios de aceptación
 
-- [ ] Abrir `index.html` muestra un canvas de 800x600 px con la paleta, la bola pegada a ella y los 100 bloques (10x10) dibujados con el spritesheet.
-- [ ] Mover el mouse sobre el canvas mueve la paleta horizontalmente, respetando los límites del canvas.
-- [ ] Presionar flechas izquierda/derecha o A/D mueve la paleta, respetando los límites del canvas.
-- [ ] Hacer click lanza la bola desde la posición de la paleta.
-- [ ] La bola rebota en paredes laterales y techo con ángulo reflejado.
-- [ ] La bola rebota en la paleta con ángulo distinto según el punto de impacto (no siempre el mismo ángulo).
-- [ ] Al chocar con un bloque, el bloque desaparece, suena `break-sound.mp3` y el puntaje aumenta en 10.
-- [ ] Al chocar con paleta o pared, suena `ball-bounce.mp3`.
-- [ ] El HUD (esquina superior) muestra vidas y puntaje actualizados en tiempo real.
-- [ ] Si la bola cae debajo de la paleta y quedan vidas, se resta 1 vida y la bola vuelve a quedar pegada a la paleta.
-- [ ] Si la bola cae debajo de la paleta con 0 vidas restantes, aparece el overlay con mensaje de derrota.
-- [ ] Si se rompen los 100 bloques, aparece el overlay con mensaje de victoria.
-- [ ] El botón "Reiniciar" del overlay reinicia vidas, puntaje, bloques y posición de bola/paleta sin recargar la página, y el juego vuelve a ser jugable.
+- [x] Abrir `index.html` muestra un canvas de 800x600 px con la paleta, la bola pegada a ella y los 100 bloques (10x10) dibujados con el spritesheet.
+- [x] Mover el mouse sobre el canvas mueve la paleta horizontalmente, respetando los límites del canvas.
+- [x] Presionar flechas izquierda/derecha o A/D mueve la paleta, respetando los límites del canvas.
+- [x] Hacer click lanza la bola desde la posición de la paleta.
+- [x] La bola rebota en paredes laterales y techo con ángulo reflejado.
+- [x] La bola rebota en la paleta con ángulo distinto según el punto de impacto (no siempre el mismo ángulo).
+- [x] Al chocar con un bloque, el bloque desaparece, suena `break-sound.mp3` y el puntaje aumenta en 10.
+- [x] Al chocar con paleta o pared, suena `ball-bounce.mp3`.
+- [x] El HUD (esquina superior) muestra vidas y puntaje actualizados en tiempo real.
+- [x] Si la bola cae debajo de la paleta y quedan vidas, se resta 1 vida y la bola vuelve a quedar pegada a la paleta.
+- [x] Si la bola cae debajo de la paleta con 0 vidas restantes, aparece el overlay con mensaje de derrota.
+- [x] Si se rompen los 100 bloques, aparece el overlay con mensaje de victoria.
+- [x] El botón "Reiniciar" del overlay reinicia vidas, puntaje, bloques y posición de bola/paleta sin recargar la página, y el juego vuelve a ser jugable.
 
 ## Decisiones tomadas y descartadas
 
