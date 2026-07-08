@@ -29,10 +29,13 @@ const ball = {
 };
 
 const gameState = {
-  status: 'ready',
+  status: 'naming',
   score: 0,
   lives: 3,
 };
+
+const PLAYER_NAME_KEY = 'arkanoid_player_name';
+let playerName = localStorage.getItem( PLAYER_NAME_KEY ) || '';
 
 const BLOCK_COLORS = [ 'red', 'yellow', 'cyan', 'magenta', 'hotpink', 'green', 'gray' ];
 const BLOCKS_START_X = ( CANVAS_WIDTH - BLOCK_COLS * BLOCK_WIDTH ) / 2;
@@ -91,6 +94,31 @@ const overlayMessage = document.getElementById( 'overlayMessage' );
 const restartButton = document.getElementById( 'restartButton' );
 
 restartButton.addEventListener( 'click', resetGame );
+
+const nameOverlay = document.getElementById( 'nameOverlay' );
+const nameInput = document.getElementById( 'nameInput' );
+const nameSubmitButton = document.getElementById( 'nameSubmitButton' );
+const nameError = document.getElementById( 'nameError' );
+
+nameInput.value = playerName;
+
+function submitName() {
+  const trimmed = nameInput.value.trim();
+  if ( !trimmed ) {
+    nameError.textContent = 'Ingresá un nombre para jugar.';
+    return;
+  }
+  playerName = trimmed;
+  localStorage.setItem( PLAYER_NAME_KEY, playerName );
+  nameError.textContent = '';
+  nameOverlay.classList.add( 'hidden' );
+  gameState.status = 'ready';
+}
+
+nameSubmitButton.addEventListener( 'click', submitName );
+nameInput.addEventListener( 'keydown', ( e ) => {
+  if ( e.key === 'Enter' ) submitName();
+} );
 
 function resetGame() {
   gameState.status = 'ready';
@@ -246,6 +274,7 @@ function drawHUD() {
   ctx.textBaseline = 'top';
   ctx.fillText( `Vidas: ${gameState.lives}`, 10, 10 );
   ctx.fillText( `Puntaje: ${gameState.score}`, 10, 30 );
+  ctx.fillText( `Jugador: ${playerName}`, 10, 50 );
 }
 
 function updateOverlay() {

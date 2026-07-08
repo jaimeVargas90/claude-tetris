@@ -46,6 +46,44 @@
       padding: 10px 20px;
       cursor: pointer;
     }
+    #nameOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 800px;
+      height: 600px;
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: monospace;
+    }
+    #nameOverlay.hidden {
+      display: none;
+    }
+    #nameOverlay h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    #nameOverlay input {
+      font-size: 18px;
+      padding: 8px;
+      width: 240px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #nameOverlay button {
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    #nameError {
+      color: #f55;
+      min-height: 20px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -54,6 +92,12 @@
     <div id="overlay">
       <h1 id="overlayMessage"></h1>
       <button id="restartButton">Reiniciar</button>
+    </div>
+    <div id="nameOverlay">
+      <h1>Ingresá tu nombre</h1>
+      <input type="text" id="nameInput" maxlength="15" placeholder="Nombre">
+      <button id="nameSubmitButton">Jugar</button>
+      <div id="nameError"></div>
     </div>
   </div>
   <script src="assets/assets/spritesheet.js"></script>
