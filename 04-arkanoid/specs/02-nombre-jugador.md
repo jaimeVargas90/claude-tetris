@@ -1,6 +1,6 @@
 # 02 - Nombre de Jugador
 
-**Estado:** Implementado
+**Estado:** Approved
 **Dependencias:** spec 01 (MVP Arkanoid jugable)
 **Fecha:** 2026-07-08
 
