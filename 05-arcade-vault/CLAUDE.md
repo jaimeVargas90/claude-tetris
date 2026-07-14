@@ -8,6 +8,9 @@ Este archivo guía a Claude Code (claude.ai/code) al trabajar en este repositori
 
 Arcade Vault: plataforma para jugar online y competir por puntos/leaderboards. Por ahora es scaffold fresco de `create-next-app` (App Router, Next.js 16.2.10, React 19.2.4, TS, Tailwind v4) — sin lógica de juego todavía.
 
+## Styles
+Usa siempre /frontend-design para diseñas interfaces de usuario.
+
 ## Comandos
 
 - `npm run dev` — servidor dev
